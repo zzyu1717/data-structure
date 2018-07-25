@@ -1,0 +1,29 @@
+一 数组
+1、数组最大的优点：可以快速查询
+2、数组最好应用于“索引有语意”的情况
+3、但并非所有有语意的索引都适用于数组如：身份证号
+4、动态数组时间复杂度：
+    1）增：O(n)
+    2）删：O(n)
+    3）改：已知索引O(1);未知索引O(n)
+    4）查：已知索引O(1);未知索引O(n)
+
+
+    addLast(e)  O(1)
+    addFirst(e) O(n)
+    add(index,e) O(n/2)=O(n)
+    考虑最坏的情况：O(n)
+
+    resize复杂度分析：
+    假设capacity = n, n+1次addLast, 触发resize,总共进行2n+1次操作，平均每次addLast操作，进行了2次基本操作
+    这样均摊计算，addLast均摊复杂度为O(1)
+
+二 简单的时间复杂度分析
+1、大O描述的是算法的运行时间和输入数据之间的关系，是渐进时间复杂度：描述n趋近于无穷的情况
+2、均摊复杂度（amortized time complexity)
+3、复杂度震荡
+    原因：removeLast时resize过于着急（eager)
+    解决方案：Lazy: 当size==capacity/4时，才将capacity减半，预留1/4空余空间添加元素，防止震荡
+
+
+
