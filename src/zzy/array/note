@@ -26,4 +26,7 @@
     解决方案：Lazy: 当size==capacity/4时，才将capacity减半，预留1/4空余空间添加元素，防止震荡
 
 
+data[size] = null; // loitering object.
+
+
 

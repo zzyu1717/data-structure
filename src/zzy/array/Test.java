@@ -23,5 +23,7 @@ public class Test {
 
         System.out.println(arr);
 
+        System.out.println(null == null);
+
     }
 }

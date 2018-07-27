@@ -143,6 +143,14 @@ public class MyArray<T> {
         return data[index];
     }
 
+    public T getLast() {
+        return get(size-1);
+    }
+
+    public T getFirst() {
+        return get(0);
+    }
+
     /**
      * 查找数组中是否有元素e
      * @param e
