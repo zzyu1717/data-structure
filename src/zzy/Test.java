@@ -5,6 +5,7 @@ package zzy;
  */
 
 public class Test {
+
     public static void m() {
         System.out.println("hello");
     }
