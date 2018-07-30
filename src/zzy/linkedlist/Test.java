@@ -6,7 +6,7 @@ package zzy.linkedlist;
 
 public class Test {
     public static void main(String[] args) {
-        LinkedListR<Integer> list = new LinkedListR<>();
+        LinkedList<Integer> list = new LinkedList<>();
 
         for (int i = 0; i < 5; i++) {
             list.addFirst(i);
@@ -27,7 +27,7 @@ public class Test {
         list.removeLast();
         System.out.println(list);
 
-        list.removeElement(1);
+        list.removeElement(3);
 
         System.out.println(list);
 
