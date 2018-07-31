@@ -366,7 +366,6 @@ public class BST<E extends Comparable<E>> {
     private Node removeMin(Node node) {
         if (node.left == null) {
             Node rightNode = node.right;
-            node.left = null;
             size --;
             return rightNode;
         }
