@@ -11,8 +11,6 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        Test t = null;
-        //t.m();
-        m();
+        System.out.println(-1/2);
     }
 }

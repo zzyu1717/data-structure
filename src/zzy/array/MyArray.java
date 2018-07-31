@@ -1,5 +1,6 @@
 package zzy.array;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -21,6 +22,11 @@ public class MyArray<T> {
 
     public MyArray(int capacity) {
         data = (T[])new Object[capacity];
+    }
+
+    public MyArray(T[] arr) {
+        size = arr.length;
+        data = Arrays.copyOf(arr,size);
     }
 
     public MyArray() {
@@ -65,6 +71,18 @@ public class MyArray<T> {
         size ++;
     }
 
+    /**
+     * update exist value.
+     * @param index
+     * @param e
+     */
+    public void set(int index, T e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("index illegal");
+        }
+        data[index] = e;
+    }
+
     private void resize(int newCapacity) {
         T[] newData = (T[])new Object[newCapacity];
         for (int i = 0; i < size; i++) {
@@ -104,6 +122,10 @@ public class MyArray<T> {
         return remove(0);
     }
 
+    /**
+     * 返回删除数组末尾的值
+     * @return
+     */
     public T removeLast() {
         return remove(size-1);
     }
