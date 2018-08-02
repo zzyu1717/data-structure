@@ -1,0 +1,32 @@
+Trie 字典树 前缀树
+
+字典：如果有n个条目，使用树结构，查询的时间复杂度是O(logn)；如果有100万个条目，logn大约为20
+Trie:查询每个条目的时间复杂度和字典中一共有多少条目无关！时间复杂度为O(w),w为单词长度，绝大数英文单词长度不超过10
+
+Trie:每个节点有若干个指向下个节点的指针
+
+class Node {
+    boolean isWord;
+    Map<char,Node> next;
+}
+
+拓展：
+Trie的删除
+
+Trie的局限性：最大的问题是空间
+压缩字典树Compressed trie
+
+Ternary Search Trie
+
+后缀树
+
+字符模式识别：
+子串查询
+KMP Boyer-Moore Rabin-Karp
+
+文件压缩
+
+模式匹配
+
+编译原理
+
