@@ -1,5 +1,7 @@
 package zzy;
 
+import java.util.Random;
+
 /**
  * created in 19:09 2018/7/27 by zhaozhenyu.
  */
@@ -11,6 +13,7 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        System.out.println(-1/2);
+        Random random = new Random();
+        System.out.println(random.nextInt(1));
     }
 }
